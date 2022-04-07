@@ -1,0 +1,14 @@
+server.port=8020
+server.servlet.context-path=/baseService
+
+#配置发布的服务的名字
+spring.application.name=baseService
+
+#配置注册中心
+eureka.client.fetch-registry=true
+eureka.client.register-with-eureka=true
+eureka.client.service-url.defaultZone=http://localhost:8010/configService/eureka
+
+
+#配置系统的负载均衡策略，格式:服务的名字.ribbon.NFLoadBalancerRuleClassName
+#orders-provider.ribbon.NFLoadBalancerRuleClassName=com.netflix.loadbalancer.RandomRule
